@@ -1,0 +1,41 @@
+{
+  "_note": "Best-effort SiteOrigin Page Builder 'panels_data' scaffold for the Home Page, built from the custom Kavisamrat widgets. SiteOrigin's internal export schema can shift slightly between versions, so treat this as a starting point: import it via Page Builder > Import/Export on a draft page, then verify each row renders and adjust in the live editor. If import fails, rebuild these same four rows directly in Page Builder — it takes about 10 minutes using the widgets below.",
+  "panels_data": {
+    "widgets": [
+      {
+        "title": "",
+        "text": "<div class=\"kv-hero kv-section--inverse\"><div class=\"kv-hero__inner\"><div class=\"kv-hero__telugu telugu-text\">విశ్వనాథ సత్యనారాయణ · కవిసమ్రాట్</div><h1 class=\"kv-hero__title\">Kavisamrat</h1><p class=\"kv-hero__subtitle\">The Poet Emperor of Telugu Letters</p><div class=\"kv-hero__actions\"><a class=\"kv-btn kv-btn--primary\" href=\"/books/\">Explore the Works</a><a class=\"kv-btn kv-btn--outline-ivory\" href=\"/about/\">View Biography</a></div></div></div>",
+        "panels_info": { "class": "WP_Widget_Text", "id": "hero-html", "title": "Hero", "grid": 0, "cell": 0 }
+      },
+      {
+        "title": "Major Works",
+        "mode": "chrono",
+        "count": 6,
+        "columns": "3",
+        "panels_info": { "class": "Kavisamrat_SO_Book_Grid_Widget", "id": "featured-books", "title": "Featured Books", "grid": 1, "cell": 0 }
+      },
+      {
+        "title": "",
+        "text": "<div class=\"kv-container\"><div class=\"eyebrow\">Literary Legacy</div><h2>Eight Decades of Unceasing Creation</h2><p>Viswanadha Sathyanarayana's poetic legacy spans over forty works of verse, prose, and drama&mdash;each rooted in classical Sanskrit tradition yet breathing with the vernacular spirit of Telugu.</p><a class=\"kv-btn kv-btn--secondary\" href=\"/about/\">Read Full Biography</a></div>",
+        "panels_info": { "class": "WP_Widget_Text", "id": "bio-html", "title": "Biography", "grid": 2, "cell": 0 }
+      },
+      {
+        "title": "Latest Media & Excerpts",
+        "book_id": "",
+        "panels_info": { "class": "Kavisamrat_SO_Book_Highlights_Widget", "id": "latest-highlights", "title": "Latest Highlights", "grid": 3, "cell": 0 }
+      }
+    ],
+    "grids": [
+      { "style": { "class": "kv-row kv-row--hero" } },
+      { "style": { "class": "kv-row kv-row--featured-books" } },
+      { "style": { "class": "kv-row kv-row--biography" } },
+      { "style": { "class": "kv-row kv-row--latest" } }
+    ],
+    "grid_cells": [
+      { "weight": 1, "grid": 0 },
+      { "weight": 1, "grid": 1 },
+      { "weight": 1, "grid": 2 },
+      { "weight": 1, "grid": 3 }
+    ]
+  }
+}

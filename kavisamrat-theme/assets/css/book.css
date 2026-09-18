@@ -1,0 +1,26 @@
+/* Supplementary styles loaded only on book templates + the home page */
+
+.book-description {
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+.book-description p:first-of-type::first-letter {
+  font-family: var(--font-heading);
+  font-size: 3.2em;
+  float: left;
+  line-height: 0.85;
+  padding: 0.05em 0.08em 0 0;
+  color: var(--color-brass);
+}
+.book-description h2,
+.book-description h3 { margin-top: 1.5em; }
+.book-description blockquote {
+  margin: 1.5em 0;
+  padding-left: 1.25em;
+  border-left: 3px solid var(--color-brass);
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.kv-book-grid-widget { padding-block: var(--space-lg); }

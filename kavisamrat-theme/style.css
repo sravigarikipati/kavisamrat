@@ -1,0 +1,15 @@
+/*
+Theme Name: Kavisamrat
+Theme URI: https://example.com/kavisamrat
+Author: Your Studio
+Author URI: https://example.com
+Description: Digital archive & author website theme for Viswanadha Sathyanarayana ("Kavi Samrat"), built on the PODS Framework and SiteOrigin Page Builder. Design system: Ekavira Ivory / Dharmarao Espresso / Veyi Padagalu Brass / Kinnerasani Emerald / Kamalam Rose / Sankha Silver. Headings in Tiro Telugu, body in Noto Sans Telugu.
+Version: 1.0.0
+Requires PHP: 7.4
+Text Domain: kavisamrat
+Tags: custom-post-types, custom-fields, page-builder, translation-ready
+
+This file intentionally holds only the required theme header comment.
+All actual styling lives in /assets/css/kavisamrat-design-system.css,
+enqueued from functions.php, so it can be cached and versioned independently.
+*/

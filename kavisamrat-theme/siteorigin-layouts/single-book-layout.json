@@ -1,0 +1,19 @@
+{
+  "_note": "Best-effort SiteOrigin Page Builder 'panels_data' scaffold for the Single Book layout. Same caveat as home-page-layout.json — verify on a draft, rebuild live if import doesn't take. This is only needed if you want the single-book.php PHP layout overridden per-book via Page Builder; the PHP template already renders the full layout automatically for any book that has NOT been customized this way.",
+  "panels_data": {
+    "widgets": [
+      {
+        "title": "",
+        "book_id": "",
+        "panels_info": { "class": "Kavisamrat_SO_Book_Highlights_Widget", "id": "book-highlights", "title": "Highlights", "grid": 0, "cell": 0 }
+      }
+    ],
+    "grids": [
+      { "style": { "class": "kv-row kv-row--book-highlights" } }
+    ],
+    "grid_cells": [
+      { "weight": 1, "grid": 0 }
+    ]
+  },
+  "usage_note": "The book_hero, description, characters, media, and gallery sections are already rendered automatically by single-book.php from the Pods fields (book_thumbnail, buy_links, book_description, book_characters, media_links, book_images) with no Page Builder needed. Only add a Page Builder layout to a specific book if an editor wants to hand-customize that one book's page beyond the standard template."
+}

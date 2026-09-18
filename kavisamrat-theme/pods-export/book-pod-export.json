@@ -1,0 +1,125 @@
+{
+  "_note": "Best-effort Pods 3.x export of the 'book' Pod. This mirrors inc/register-book-pod.php exactly. If Pods Admin > Import/Export Tools rejects this file (export schemas vary slightly across Pods versions), the code-based registration in inc/register-book-pod.php is the authoritative, tested path — it runs automatically on theme activation.",
+  "book": {
+    "name": "book",
+    "label": "Books",
+    "type": "post_type",
+    "storage": "meta",
+    "object": "",
+    "options": {
+      "label_singular": "Book",
+      "label_plural": "Books",
+      "public": "1",
+      "show_ui": "1",
+      "show_in_menu": "1",
+      "menu_icon": "dashicons-book-alt",
+      "has_archive": "1",
+      "rewrite": "1",
+      "rewrite_custom_slug": "books",
+      "supports_title": "1",
+      "supports_editor": "1",
+      "supports_thumbnail": "1",
+      "supports_revisions": "1",
+      "supports_siteorigin-panels": "1",
+      "publicly_queryable": "1"
+    },
+    "fields": {
+      "book_title": {
+        "name": "book_title",
+        "label": "Book Title",
+        "type": "text",
+        "options": { "required": "1" }
+      },
+      "book_thumbnail": {
+        "name": "book_thumbnail",
+        "label": "Book Thumbnail",
+        "type": "file",
+        "options": {
+          "file_type": "image",
+          "file_format_type": "single",
+          "file_uploader": "media",
+          "required": "1"
+        }
+      },
+      "book_images": {
+        "name": "book_images",
+        "label": "Book Images",
+        "type": "file",
+        "options": {
+          "file_type": "image",
+          "file_format_type": "multi",
+          "file_uploader": "media"
+        }
+      },
+      "book_highlights": {
+        "name": "book_highlights",
+        "label": "Book Highlights",
+        "type": "group",
+        "options": {
+          "repeatable": "1",
+          "repeatable_format": "group",
+          "label_group_field": "highlight_text"
+        },
+        "fields": {
+          "highlight_text": { "name": "highlight_text", "label": "Highlight / Quote", "type": "paragraph" },
+          "highlight_attribution": { "name": "highlight_attribution", "label": "Attribution (optional)", "type": "text" }
+        }
+      },
+      "book_description": {
+        "name": "book_description",
+        "label": "Book Description",
+        "type": "wysiwyg"
+      },
+      "buy_links": {
+        "name": "buy_links",
+        "label": "Where to Buy",
+        "type": "group",
+        "options": {
+          "repeatable": "1",
+          "repeatable_format": "group",
+          "label_group_field": "vendor_name"
+        },
+        "fields": {
+          "vendor_name": { "name": "vendor_name", "label": "Vendor Name", "type": "text" },
+          "vendor_url": { "name": "vendor_url", "label": "Vendor URL", "type": "website" }
+        }
+      },
+      "media_links": {
+        "name": "media_links",
+        "label": "Media Links",
+        "type": "code",
+        "options": { "repeatable": "1" }
+      },
+      "book_characters": {
+        "name": "book_characters",
+        "label": "Book Characters",
+        "type": "group",
+        "options": {
+          "required": "0",
+          "repeatable": "1",
+          "repeatable_format": "group",
+          "label_group_field": "character_name"
+        },
+        "fields": {
+          "character_name": { "name": "character_name", "label": "Character Name", "type": "text" },
+          "character_description": { "name": "character_description", "label": "Character Description", "type": "paragraph" }
+        }
+      },
+      "publication_year": {
+        "name": "publication_year",
+        "label": "Publication Year",
+        "type": "number",
+        "options": { "number_format_type": "integer" }
+      },
+      "genre": {
+        "name": "genre",
+        "label": "Genre",
+        "type": "pick",
+        "options": {
+          "pick_object": "custom-simple",
+          "pick_custom": "Poetry\nDrama\nProse\nTranslation\nCriticism"
+        }
+      }
+    }
+  }
+}

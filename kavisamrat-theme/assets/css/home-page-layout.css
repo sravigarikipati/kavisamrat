@@ -1,0 +1,158 @@
+/* ==========================================================================
+   Kavisamrat — Home Page Layout Companion CSS
+   Styles the custom class hooks used in home-page-layout.json:
+   .hero-section, .stats-bar, .cultural-card, .gold-border-accent,
+   .magnum-opuses, .biography-heritage, .media-archive
+   Append this to assets/css/kavisamrat-design-system.css, or enqueue
+   separately — it relies on the color/type tokens already defined there.
+   ========================================================================== */
+
+/* ---------- Hero Section ---------- */
+.hero-section {
+  padding-block: var(--space-xl);
+  background: var(--color-bg);
+}
+.hero-section__eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+.hero-section__title {
+  font-size: var(--fs-h1);
+  margin-bottom: var(--space-sm);
+}
+.hero-section__body {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 46ch;
+}
+.hero-section__cta {
+  margin-right: var(--space-xs);
+  margin-top: var(--space-xs);
+  display: inline-flex;
+}
+.hero-section__portrait {
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Generic "no image selected yet" placeholder look */
+.image-placeholder {
+  background: var(--color-stone);
+  border: var(--border-width) dashed var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--fs-small);
+  padding: var(--space-md);
+}
+.image-placeholder img { display: none; } /* hidden until a real image is selected */
+
+/* ---------- Gold border accent (shared frame treatment) ---------- */
+.gold-border-accent {
+  border: 2px solid var(--color-brass);
+  box-shadow: 0 24px 48px -20px rgba(43, 29, 20, 0.35);
+  position: relative;
+}
+.gold-border-accent::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(200, 155, 60, 0.4);
+  pointer-events: none;
+}
+
+/* ---------- Stats Bar ---------- */
+.stats-bar {
+  background: var(--color-espresso);
+  color: var(--color-ivory);
+  padding-block: var(--space-lg);
+  text-align: center;
+}
+.stats-bar .stat-card__number {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-brass);
+  margin-bottom: 0.2em;
+}
+.stats-bar .stat-card__number--text { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+.stats-bar .stat-card__label {
+  font-size: var(--fs-small);
+  letter-spacing: 0.06em;
+  color: rgba(249, 246, 240, 0.8);
+}
+.stats-bar .stat-card__label p { margin: 0; }
+
+/* ---------- Magnum Opuses / Cultural Cards ---------- */
+.magnum-opuses { padding-block: var(--space-xl); }
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+.magnum-opuses-grid { padding-top: var(--space-sm); }
+
+.cultural-card {
+  background: var(--color-ivory);
+  border: var(--border-width) solid var(--color-border);
+  padding: var(--space-md);
+  height: 100%;
+}
+.cultural-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4em;
+}
+.cultural-card__subtitle {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.75em;
+  color: var(--color-text-muted);
+}
+.cultural-card p { margin: 0; color: var(--color-text-muted); font-size: 0.95rem; }
+
+/* Cultural card used as a stat-bar cell background (inverse variant) */
+.stats-bar .cultural-card {
+  background: transparent;
+  border: none;
+  padding: var(--space-sm);
+}
+
+/* ---------- Biography & Heritage ---------- */
+.biography-heritage {
+  padding-block: var(--space-xl);
+  background: var(--color-bg-alt);
+}
+.biography-heritage__body {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+.biography-heritage__image {
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Media & Archival Excerpts ---------- */
+.media-archive { padding-block: var(--space-xl); }
+.media-placeholder p.eyebrow {
+  color: var(--color-accent);
+  font-size: var(--fs-small);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4em;
+}
+
+@media (max-width: 700px) {
+  .hero-section .kv-container,
+  .biography-heritage .kv-container { grid-template-columns: 1fr; }
+}
